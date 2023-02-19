@@ -210,7 +210,7 @@ Restart PHP `sudo service php7.4-fpm restart`
 
 ### Configure the virtual host for nginx
 
-Add the below server block to /usr/local/nginx/conf/nginx.conf and remove the default server block.
+Add the below server block to ```/etc/nginx/sites-available/default``` and remove the default server block.
 
 ```
     server {
@@ -232,9 +232,9 @@ Add the below server block to /usr/local/nginx/conf/nginx.conf and remove the de
 
 ```
 sudo mkdir -p /var/www/static-maps-api
-sudo chown -R ubuntu: /var/www
+sudo chown -R $USER:$USER /var/www/
 cd /var/www/static-maps-api
-git clone git@github.com:dshanske/Static-Maps-API-PHP.git .
+git clone https://github.com/dshanske/Static-Maps-API-PHP .
 ```
 
 ## License
